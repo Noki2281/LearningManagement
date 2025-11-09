@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LMS Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Learning Management Dashboard</h1>
+
+    <section id="courses">
+        <h2>Courses</h2>
+        <ul id="courseList"></ul>
+        <form id="addCourseForm">
+            <input id="title" placeholder="Course title" required />
+            <input id="description" placeholder="Description" required />
+            <button type="submit">Add Course</button>
+        </form>
+    </section>
+
+    <section id="students">
+        <h2>Students</h2>
+        <ul id="studentList"></ul>
+        <form id="addStudentForm">
+            <input id="studentName" placeholder="Student name" required />
+            <button type="submit">Add Student</button>
+        </form>
+    </section>
+
+    <section id="assign">
+        <h2>Assign Student to Course</h2>
+        <form id="assignForm">
+            <select id="studentSelect"></select>
+            <select id="courseSelect"></select>
+            <button type="submit">Assign</button>
+        </form>
+    </section>
+
+    <section id="enrolments">
+        <h2>Enrollment Report</h2>
+        <button onclick="loadReport()">View Report</button>
+        <ul id="reportList"></ul>
+    </section>
+
+    <section id="report-section">
+        <h2>Enrollment Report</h2>
+        <div id="report-container" class="report-grid"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
